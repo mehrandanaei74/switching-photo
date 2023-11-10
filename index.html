@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="container" >
+        <div class="view-box">
+            <div class="action-button">
+                <button style="background: red;"></button>
+                <button style="background: yellow;"></button>
+                <button style="background: green;"></button>
+
+            </div>
+
+            <div class="container-box">
+                <div class="top-buttons">
+                    <button onclick="switchvideo(0)">frontend</button>
+                    <button onclick="switchvideo(1)">backend</button>
+                </div>
+                    <img class="code-video" style="width: 100%;" src="https://www.w3schools.com/codeeditor.gif" alt="">
+                    <img class="code-video" style="width: 100%; display:none;" src="https://www.w3schools.com/tryit/best2.gif" alt="">
+                
+            </div>
+        </div>
+   </div> 
+         
+    
+           
+        
+    
+</body>
+<style>
+
+*{
+    padding: none;
+    margin: none;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #282a35;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.view-box{
+    width: 80%;
+    height: 21rem;
+    background-color: #f1f1f1;
+    border-radius: 0.4rem;
+    position: relative;
+}
+.action-button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.6rem 0.4rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+.action-button > button{
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    border-radius: 100%;
+
+}
+.container-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.top-buttons{
+    margin-top: 2rem;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.top-buttons > button{
+    height: 3rem;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+}
+
+.top-buttons > button:hover {
+    background-color: #e7e9eb;
+}
+</style>
+<script>
+
+    function switchvideo(cnt)
+    {
+        let videos = document.querySelectorAll('.code-video');
+        if(cnt==0)
+        {
+            videos[0].style.display= 'block';
+            videos[1].style.display= 'none';
+
+        }
+        else
+        {
+            videos[0].style.display= 'none';
+            videos[1].style.display= 'block';
+        }
+    }
+</script>
+</html>
